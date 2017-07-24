@@ -1,9 +1,11 @@
 /* start using SCSS for nesting */
-
+body {
+  margin: 0;
+}
 .card-deck {
   position: relative;
   background: gray;
-  height: 100vw;
+  height: 100vh;
 }
 
 .card {
