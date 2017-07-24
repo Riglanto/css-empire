@@ -8,12 +8,44 @@
 
 <body>
 
-  <div class=button-div>
-    <button class="punk-button inc">Inc</button>
-    <button class="punk-button out">Out</button>
-  </div>
-  <button class="anim-button">Text</button>
 
+  <div class="card-deck">
+    <div class="card green active">
+      <div class=button-div>
+        <button class="punk-button inc">Inc</button>
+        <button class="punk-button out">Out</button>
+      </div>
+      <button class="anim-button">Text</button>
+      <div class="bookmark green" onclick="selectCard(this)">
+      </div>
+    </div>
+    <div class="card red">
+      <div class="bookmark bookmark-2 red" onclick="selectCard(this)">
+      </div>
+    </div>
+    <div class="card blue">
+      <div class="bookmark bookmark-3 blue" onclick="selectCard(this)">
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="wrapper">
+    <img class="imag" src="http://www.mba.com/~/media/Images/mba2/the-gmat-exam/prepare-for-the-gmat-exam/plan-for-test-day/2013-test-center-checklist_med.png">
+  </div>
+  <div class="wrapper">
+    <img class="imag" src="https://wp-test.sencha.com/wp-content/uploads/2016/02/icon-sencha-test-studio-1.png">
+  </div> -->
+
+
+  <script>
+    function selectCard(clicked) {
+      var ch = clicked.parentElement.parentElement.children;
+      for (var i = 0; i < ch.length; i++) {
+        ch[i].classList.remove('active');
+      }
+      clicked.parentElement.classList.add('active');
+    }
+  </script>
 </body>
 
 </html>
